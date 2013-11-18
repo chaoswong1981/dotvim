@@ -54,7 +54,7 @@ set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
 " map keys
 let mapleader = ","
 
-" lookup file
+" funnyFinder
 map <leader>b :FufBuffer<cr>
 map <leader>f :FufFile<cr>
 
