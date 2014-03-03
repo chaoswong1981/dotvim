@@ -8,12 +8,11 @@ call vundle#rc()
 " required! 
 Bundle 'gmarik/vundle'
 
-Bundle 'L9'
-Bundle 'FuzzyFinder'
-"Bundle "Shougo/neocomplete"
-"Bundle "Shougo/neosnippet"
-Bundle "snipMate"
-Bundle "scrooloose/nerdtree"
+"Bundle "snipMate"
+Bundle "kien/ctrlp.vim"
+Bundle "tomasr/molokai"
+Bundle "SirVer/ultisnips"
+Bundle "Lokaltog/vim-powerline"
 
 filetype plugin indent on     " required!
 "
@@ -47,6 +46,7 @@ se autoindent
 set go-=m
 set go-=T
 
+set expandtab
 set shiftwidth=4
 set tabstop=4
 
@@ -56,17 +56,21 @@ set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
 
 " 设置菜单为英文
 set langmenu=en_US
-let $LANG='en_US'  
+let $LANG='en_US.utf8'  
 so $VIMRUNTIME/delmenu.vim
 so $VIMRUNTIME/menu.vim
 
 let mapleader = ","
-" funnyFinder
-map <leader>b :FufBuffer<cr>
-map <leader>f :FufFile<cr>
 
-" NERDTree
-map <leader>t :NERDTreeToggle<cr>
+" color scheme
+colo molokai
+
+" ctrlp
+map <leader>f :CtrlP<cr>
+map <leader>b :CtrlPBuffer<cr>
 
 " general
 map <space> <C-D>
+
+" powerline
+set laststatus=2   " Always show the statusline
