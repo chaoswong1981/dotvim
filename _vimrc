@@ -7,7 +7,7 @@ call plug#begin('~/.vimfile/plugged')
 "Plug "snipMate"
 Plug 'kien/ctrlp.vim'
 Plug 'SirVer/ultisnips'
-Plug 'Lokaltog/vim-powerline'
+Plug 'bling/vim-airline'
 
 call plug#end()
 
@@ -54,6 +54,7 @@ map <leader>b :CtrlPBuffer<cr>
 
 " general
 map <space> <C-D>
+map <leader>w :w<cr>
 
-" powerline
+" airline
 set laststatus=2   " Always show the statusline
