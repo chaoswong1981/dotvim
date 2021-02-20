@@ -2,16 +2,7 @@ set nocompatible " be iMproved
 filetype off " required!
 filetype plugin indent on " required!
 
-call plug#begin('~/.vimfile/plugged')
-
-"Plug "snipMate"
-Plug 'kien/ctrlp.vim'
-Plug 'SirVer/ultisnips'
-Plug 'bling/vim-airline'
-
-call plug#end()
-
-" self config
+" base
 syntax on
 set guifont=Consolas:h11
 set gfw=courier_new:h11:cGB2312
@@ -29,9 +20,6 @@ se ignorecase
 se hlsearch
 se autoindent
 
-set go-=m
-set go-=T
-
 set expandtab
 set shiftwidth=4
 set tabstop=4
@@ -46,15 +34,7 @@ let $LANG='en_US.utf8'
 so $VIMRUNTIME/delmenu.vim
 so $VIMRUNTIME/menu.vim
 
-let mapleader = ","
-
-" ctrlp
-map <leader>f :CtrlP<cr>
-map <leader>b :CtrlPBuffer<cr>
-
 " general
+let mapleader = ","
 map <space> <C-D>
 map <leader>w :w<cr>
-
-" airline
-set laststatus=2   " Always show the statusline
