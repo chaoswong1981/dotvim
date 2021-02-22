@@ -13,7 +13,7 @@ set guifont=Consolas:h11
 set gfw=courier_new:h11:cGB2312
 set number
 
-colo solarized
+colo papercolor
 if has('gui_running')
     set background=light
 else
