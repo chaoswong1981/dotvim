@@ -3,6 +3,7 @@ filetype off " required!
 filetype plugin indent on " required!
 
 " 取得本文件所在的目录
+command! -nargs=1 IncScript exec 'so '. fnameescape(s:home."/<args>")
 let s:home = fnamemodify(resolve(expand('<sfile>:p')), ':h')
 " 将 vim-init 目录加入 runtimepath
 exec 'set rtp+='.s:home
@@ -25,6 +26,7 @@ se autochdir
 se nobackup
 set backspace=indent,eol,start
 set hidden
+set mouse=nv
 set clipboard=unnamed
 
 se incsearch
@@ -61,7 +63,7 @@ map <leader>w :w<cr>
 map <C-Tab> <C-W>w
 
 " 自动补全
-so ./plugs/apc.vim
+IncScript ./plugs/apc.vim
 
 " enable this plugin for filetypes, '*' for all files.
 let g:apc_enable_ft = {'*':1}
